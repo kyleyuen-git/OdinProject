@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage for Links and Images</title>
+</head>
+
+<body>
+
+    <h1>Homepage</h1>
+    <p>
+        <!-- Absolute link (link to other website) -->
+        <a href="https://calendar.google.com/calendar/u/0/r"> Google Calendar link that opens in this tab </a> <!-- This anchor element, <a></a> is used to create a link in HTML-->
+        <!-- But an anchor element alone won't do anything, you need an HTML attribute (as taught in the first lesson). Remember, an HTML attribute is made up of two parts, a name and a value(not always necessary though) -->
+        <!-- In this situation, href, known as hypertext reference, is the attribute, and the value is the destination of the link, which is google calander for my case-->
+    </p>
+
+    <p>
+        <a href="https://calendar.google.com/calendar/u/0/r" target="_blank" rel="noreferrer"> Google Calander link that opens in a new tab with built in security</a>
+        <!-- This new anchor element has added HTML attributes of target and rel. I copied and pasted the Odin Project descriptions of these two below: -->
+
+        <!-- target specifies where the linked resource will be opened. 
+         If it is not present, then, by default, it will take on the _self value which opens the link in the current tab. 
+         To open the link in a new tab or window (depends on browser settings) you can set it to _blank-->
+
+        <!-- rel describe the relation between the current page and the linked document. 
+         noopener: Prevents the new tab from accessing the original page, which would have opened the possibility of phishing attacks like tabnabbing
+         noreferrer: The same as noopener but also prevents certain details about the original page from being passed to the new page-->
+
+    </p>
+
+    <p>
+        <!-- Relative link (link to pages on our website) -->
+        <a href="../index.html" rel="noreferrer"> Link to index.html &lt; </a> <!-- relative links only include the file path relative to the page you are on, not the domain name -->
+        <!-- Since index.html is one folder UP our "file structure", relative to our current page, we use the "../" syntax-->
+    </p>
+
+    <p>
+        <!-- Image -->
+        <img src="../images/dog.jpg" alt="dog picture from the Odin Project" height="810" width="710"> <!-- the HTML attribute, alt, describes the image, and apears if the image cannot be loaded, or used by screen readers for accessibility-->
+        <!-- a crazy thing I just realized is that on the webpage, if you click inspect, then change src from "../images/dog.jpg" to "../images/cat.jpg", even though you didn't display cat, the user can see it! -->
+
+        <!-- Height and Width are self explanatory, but the numbers are measured in pixels-->
+    </p>
+
+</body>
+</html>
