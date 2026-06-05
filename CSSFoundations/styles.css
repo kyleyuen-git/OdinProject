@@ -1,0 +1,48 @@
+*{ /* the "*" is a universial selector (refers to all html elements) */
+    color: purple;
+}
+
+/* using class selector in css*/
+.first-class{
+    color:red;
+}
+#unique-id67{ /* Since "unique-id67" is an "id", we use the "#" instead of a "." */
+    font-size: 30px;
+}
+#unique-id68{
+    color: magenta;
+}
+
+/* .blue-green-opacity{
+    color:blue;
+    background-color: green;
+    opacity: 0.8;
+}
+
+.blue-green-margin{
+    color: blue;
+    background-color: green;
+    margin: 1rem;
+} */
+
+/* Instead of this ^^^ 
+    We could do this vvv*/
+
+/* The grouping selector */
+.blue-green-opacity,
+.blue-green-margin{ 
+    color:blue;
+    background-color: green;
+}
+
+.blue-green-opacity{
+    opacity: 0.8;
+}
+
+.blue-green-margin{
+    margin: 1rem;
+}
+
+.backgroundcolor{
+    background-color: aqua;
+}
