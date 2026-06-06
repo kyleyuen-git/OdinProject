@@ -43,6 +43,21 @@
     margin: 1rem;
 }
 
-.backgroundcolor{
+.backgroundcolorAQUA{
     background-color: aqua;
+}
+
+.chainSelector1{
+    color:black;
+}
+
+/* selects any element that has both the chainSelector1 and chainSelector2 class */
+.chainSelector1.chainSelector2{
+    background-color: rgb(198, 124, 255);
+}
+
+/* This also works the same for class and id chains */
+.chainSelector1#unique-id67{
+    background-color: rgb(131, 230, 202);
+    font-size: 40px;
 }
