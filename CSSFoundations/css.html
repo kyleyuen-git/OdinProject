@@ -31,5 +31,24 @@
     <p class="chainSelector1 chainSelector2"> we chain selectors 1 and 2 together in styles.css</p>
     <p class="chainSelector1 backgroundcolorAQUA"> we don't chain anything, they are standalone definitions in styles.css</p>
 
+    <!-- Descendant Combinator -->
+    <div class="ancestor"> <!-- nesting <div></div> tags inside a <p></p> tag doesn't work either -->
+        <div class="child"> <!-- nesting <p></p> tags inside each other doesn't work. we need to use nested <div></div> tags-->
+            <div class="child">
+                This will be affected by .ancestor .child css
+            </div>
+        </div>
+    </div>
+
+    <img src="../HTMLFoundations/images/cat.jpg" alt="cat licking it's paw" height="100" width="600"> <!-- These height and width values are different from the ones in CSS. but CSS takes precedence -->
+
+    <!-- Block and Inline, Div and Span-->
+    <!-- Div is for Block elements (stack ontop of each other, each new element starting on a new line )-->
+    <div><p> This div tag wraps around a block level container "&lt;p&gt; &lt;/p&gt;"" so its a separate line</p></div>
+    <!-- Span is for Inline elements (appear in line with whatever elements they are placed beside)-->
+    <p>I am writing a sentence, but, oh no, <span><a href="https://www.theodinproject.com/lessons/foundations-block-and-inline"> this span tag wraps around an inline element "&lt;a&gt; &lt;/a&gt;" </a></span> and creates a link straight into the line </p>
+
+
+    <p style="margin: 30px; font-size:500px;"> How large can this page get</p>
 </body>
 </html>

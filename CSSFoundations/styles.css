@@ -1,5 +1,19 @@
+@import url('https://googleapis.com');
+
 *{ /* the "*" is a universial selector (refers to all html elements) */
     color: purple;
+    font-family: "Papyrus","Comic Sans MS","Times New Roman",'Courier New', Courier, monospace;
+    /* font family is a comma separated list of values. the browser applies the FIRST applicable font from left to right, 
+    so all these fonts are for backup. font family name are in "" and generic family names are not in quotes */
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    outline: 1px solid red;
+}
+
+/* "Poppins" is a font imported from googleapis */
+div{
+    font-family: "Poppins";
 }
 
 /* using class selector in css*/
@@ -7,7 +21,7 @@
     color:red;
 }
 #unique-id67{ /* Since "unique-id67" is an "id", we use the "#" instead of a "." */
-    font-size: 30px;
+    font-size: 40px;
 }
 #unique-id68{
     color: magenta;
@@ -32,7 +46,7 @@
 .blue-green-opacity,
 .blue-green-margin{ 
     color:blue;
-    background-color: green;
+    background-color: hsl(120, 100%, 50%);
 }
 
 .blue-green-opacity{
@@ -54,10 +68,27 @@
 /* selects any element that has both the chainSelector1 and chainSelector2 class */
 .chainSelector1.chainSelector2{
     background-color: rgb(198, 124, 255);
+    font-weight: bold;
 }
 
 /* This also works the same for class and id chains */
 .chainSelector1#unique-id67{
     background-color: rgb(131, 230, 202);
     font-size: 40px;
+}
+
+/* Descendant Combinator */
+.ancestor .child{
+    color: red;
+    background-color: #086b08;
+    text-align: left;
+    margin: 1cm 0 1cm 1cm; /* margin takes 4 inputs, margin-top> || <margin-right> || <margin-bottom> || <margin-left */
+    padding: 8px;
+
+}
+
+img{
+    height: auto;
+    width:200px;
+    margin: 0 0 1cm 0;
 }
