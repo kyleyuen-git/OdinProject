@@ -14,7 +14,7 @@
 
 /* flex property enabled */
 .flex-container{
-    display: flex; /* A flex container is any element that has display:flex on it */
+    display: flex; /* A FLEX CONTAINER is any element that has display:flex on it */
     background: aqua;
     height: 100px;
     width: auto;
@@ -26,7 +26,7 @@
 }
 
 /* this selector selects all divs inside of .flex-container */
-/* all the divs inside of .flex-container are flex-items, so, in a way, you could consider this css for the flex-items*/
+/* all the divs inside of .flex-container are flex-items, so, in a way, you could consider this css for the FLEX-ITEMS*/
 .flex-container div {
   background: peachpuff;
   border: 4px solid brown;
@@ -35,6 +35,7 @@
   flex: 1; /* flex: 1 is interpreted as flex: 1 1 0 */
 }
 
+/* The ".grow", ".shrink", and ".basis" are class names that just indicate that I will be changing that specific value in the flex property */
 .flex-container .grow{ /* sets the growing factor relative to the others */
     flex: 2 0 0
 }
