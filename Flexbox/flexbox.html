@@ -1,40 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flexbox</title>
 
-    <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="styles.css">
 
-</head>
+    </head>
 
-<body>
-    <h1 style="text-align: center">Flexbox page</h1>
-    
-    <div class="container">
-        <div>Not a flexbox</div>
-        <div>Not a flexbox</div>
-        <div>Not a flexbox</div>
-    </div>
+    <body>
+        <h1 style="text-align: center">Flexbox page</h1>
+        
+        <div class="container">
+            <div>Not a flexbox</div>
+            <div>Not a flexbox</div>
+            <div>Not a flexbox</div>
+        </div>
 
-    <div class="flex-container">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
-    </div>
+        <div class="flex-container">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
 
-    <div class="flex-container">
-        <div class="grow"></div>
-        <div class="shrink"></div>
-        <div class="basis"></div>
-    </div>
+        <div class="flex-container">
+            <div class="grow"></div>
+            <div class="shrink"></div>
+            <div class="basis"></div>
+        </div>
 
-    <div class="flex-container-column">
-        <div class="one"></div>
-        <div class="two"></div>
-        <div class="three"></div>
-    </div>
+        <!-- Axis section -->
+        <div class="flex-container-column">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+        </div>
 
-</body>
+        <!-- Alignment section -->
+        <div class="font-size-container">
+            <div class="container-space-between height-padding-background-border-display"> justify-content: space-between
+                <div class="item">space-between</div>
+                <div class="item">space-between</div>
+                <div class="item">space-between</div>
+            </div>
+            <div class="container-center height-padding-background-border-display"> justify-content: center
+                <div class="item">center</div>
+                <div class="item">center</div>
+                <div class="item">center</div>
+            </div>
+            <div class="container-align-items-center height-padding-background-border-display"> align-items: center
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+            <div class="container-gap height-padding-background-border-display"> gap
+                <div class="item"></div>
+                <div class="item"></div>
+                <div class="item"></div>
+            </div>
+        </div>
+
+    </body>
 </html>
