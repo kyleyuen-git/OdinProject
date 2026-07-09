@@ -158,3 +158,46 @@ else{
 // accessAllowed = (age > 18) ? true : false;
 // alert(accessAllowed);
 
+function recur(num){
+    console.log(num);
+    if(num==1){
+        return true;
+    }
+    else{
+        return recur(num-1) // "return recur(num-1)" instead of just "recur(num-1)" so that 
+        // after the last recur(1) returns true, the true is passed up the ladder of function calls 
+        // and eventually passes a true to the original recur(num) call which returns true
+    }
+}
+
+recur(4)
+
+test = "Kyle"
+if(recur(4)){
+    console.log(`Hello ${test}`)
+}
+
+
+// Function Basics
+// Example #1
+function favoriteAnimal(animal){
+    return animal + " is my favorite animal!"
+}
+const message = favoriteAnimal(`Goat`)
+console.log(message)
+
+// Example #2
+function showMessage(){
+    alert(`Hello everyone`)
+}
+// showMessage(); 
+// showMessage();
+
+// Example #3 (Outer variables)
+let userName = `John`;
+function showMessage2(){
+    userName = `Bob`; // userName variable is CHANGED to "Bob"
+    console.log(`Hello ${userName}`);
+}
+showMessage2(); // prints "Hello Bob"
+console.log(`Hello ${userName}`); // still prints "Hello Bob"
