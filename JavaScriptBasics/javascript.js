@@ -178,7 +178,7 @@ if(recur(4)){
 }
 
 
-// Function Basics
+// Function Basics (http://javascript.info/function-basics)
 // Example #1
 function favoriteAnimal(animal){
     return animal + " is my favorite animal!"
@@ -201,3 +201,129 @@ function showMessage2(){
 }
 showMessage2(); // prints "Hello Bob"
 console.log(`Hello ${userName}`); // still prints "Hello Bob"
+
+showMessage3("Johnny", 20)
+// Example #4 Parameters
+function showMessage3(name, age){
+    console.log("Hello "+name+". You are "+age+" years old!")
+    console.log(`Hello ${name}. You are ${age} years old!`) // with backticks and template literals 
+}
+showMessage3("Kyle", 20)
+
+// --- !IMPORTANT TOPIC! --- Function Declaration vs Function Expression
+
+// Function Declaration
+Function_Declaration() // You can call the function before it's defined
+function Function_Declaration(){
+    console.log("Function_Declaration")
+}
+Function_Declaration()
+
+// Function Expression
+// Function_Expression() // Throws a ReferenceError: "Uncaught ReferenceError: Cannot access 'Function_Expression' before initialization at javascript.js:223:1 (anonymous) @ javascript.js:223" 
+let Function_Expression = function(){
+    console.log("Function_Expression")
+}
+Function_Expression() // You can only call the function after it is defined
+// Arrow Functions (shortcut)
+let Function_Expression2 = () => {
+    console.log("Function_Expression2")
+}
+Function_Expression2()
+
+// --- !IMPORTANT TOPIC! --- end
+
+// Example #5 (Default Values)
+function showMessage4(name, age = 18){
+    console.log(`Hello ${name}. You are ${age} years old!`) 
+}
+showMessage4("Kyle") // Even though we didn't give a second parameter, the function used the default
+                     // value for age which is 18 // prints "Hello Kyle. You are 18 years old!"
+showMessage4("Kyle", 20) // prints "Hello Kyle. You are 20 years old!"
+
+// --- https://javascript.info/function-expressions#function-is-a-value --- 
+// Example #6 (Function is a value)
+function sayHi(){
+    console.log("Say Hi!")
+}
+console.log(sayHi); // the function is stored in the name of the function VARIABLE 
+                    // (in this case, the name of the function is sayHi, so the variable 
+                    // the function is stored in is called sayHi)
+// prints "ƒ sayHi(){ console.log("Say Hi!") }"
+console.log(sayHi()) // prints "Say Hi!"
+
+// Because in JS a function is a value, we deal with it as a value
+let func = sayHi;
+func() // prints "Say Hi!"
+
+// Example #7 (Callback functions) ---
+// function ask(question, yes, no) {
+//   if (confirm(question)) yes()
+//   else no();
+// }
+
+// ask(
+//   "Do you agree?",
+//   function() { alert("You agreed."); },
+//   function() { alert("You canceled the execution."); }
+// );
+
+// if(confirm("are you sure")){ // confirm() pops up a window and shows the text inside
+//     console.log("yes")
+// }
+
+// Arrow Function Basics (https://javascript.info/arrow-functions-basics)
+// We touched on this a little bit above in Function Declaration vs Function Expression
+// Example #8
+let arrow = (a,b) => {
+    return a+b;
+}
+console.log(arrow(1,2)) // prints "3"
+
+let newArrow = arrow;
+console.log(newArrow(3,4)) // prints "7"
+
+// let age = prompt("Please enter your age:", "18");
+// alert(`You are ${age} years old!`)
+
+// Problem Solving - Solving Fizz Buzz --- 
+// let num = prompt("Please enter a number");
+// for(let i = 1; i<=num; i++){
+//     if((i%3==0)&(i%5==0)){
+//         console.log("FizzBuzz")
+//     }
+//     else if(i%3==0){
+//         console.log("Fizz")
+//     }
+//     else if(i%5==0){
+//         console.log("Buzz")
+//     }
+//     else{
+//         console.log(i)
+//     }
+// }
+
+// Exception Handling (try, catch, throw)
+function divide(a,b){
+    if(b==0){
+        throw new Error("Cannot divide by zero!"); // create a new error object in jS using constructor Error()
+    }
+    return a/b;
+}
+
+try{
+    console.log(divide(10,0));
+} catch(error){ // "error" is the name of the temporary Error object we created above
+    console.error("An error occured2506: "+ error.message); // the string "Cannot divide by zero!" passed 
+    // in the constructor Error("Cannot divide by zero!") is assigned to the attribute message 
+} // prints out "An error occured2506: Cannot divide by zero!"
+
+
+// Random Stuff
+const addString = (name) => {
+    return `Hello ${name}`
+}
+console.log(addString(34)) // prints "Hello 34"
+console.log(addString("thirty-four")) // prints "Hello thirty-four"
+
+console.log("Hello World".split(" ")) // prints "[ 'Hello', 'World' ]"
