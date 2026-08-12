@@ -286,6 +286,20 @@ console.log(newArrow(3,4)) // prints "7"
 // let age = prompt("Please enter your age:", "18");
 // alert(`You are ${age} years old!`)
 
+// Inline Arrow Functions
+let numbersArray = [1,2,3,4,5];
+// #1 No Inline; Function declared separatly 
+function double1(num){
+    return num*2
+}
+console.log("\nDoubled #1: "+numbersArray.map(double1));
+// #2 Traditional Anonymous (Inline?) Function
+let double2 = numbersArray.map(function(num){return num*2});
+console.log("Doubled #2: "+double2);
+// #3 Inline Arrow Function
+let double3 = numbersArray.map((num)=>{return num*2});
+console.log("Doubled #3: "+double3+"\n");
+
 // Problem Solving - Solving Fizz Buzz --- 
 // let num = prompt("Please enter a number");
 // for(let i = 1; i<=num; i++){
@@ -327,3 +341,53 @@ console.log(addString(34)) // prints "Hello 34"
 console.log(addString("thirty-four")) // prints "Hello thirty-four"
 
 console.log("Hello World".split(" ")) // prints "[ 'Hello', 'World' ]"
+
+// Loops and Arrays
+// Loops
+for(let i = 0; i<10; i++){
+    console.log(i+" "); // prints 0 to 9 each on a new line 
+}
+for(let i = 0; i<10; i++){
+    process.stdout.write(i+" "); // prints 0 to 9 on a single line
+}
+let i = 0
+console.log() // new line
+while(i<10){
+    process.stdout.write(i+" "); // prints 0 to 9 on a single line
+    i++;
+}
+console.log() // new line
+
+// Arrays
+let array1 = [];
+array1.push(1);
+array1.push(2);
+array1.push(3);
+array1.push("Hello World");
+console.log(array1);
+
+// The map method - iterates over array and applies callback argument (function) onto every element of the array
+function addOne(num){
+    return num + 1;
+}
+let arr = [1,2,3,4,5];
+console.log("Before map: "+arr); // prints out "[ 1, 2, 3, 4, 5 ]"
+arr.map(addOne); // creates a new array but doesn't change the original
+console.log("After map: "+arr); // still prints out "[ 1, 2, 3, 4, 5 ]"
+console.log("Directly printing map: "+arr.map(addOne)); // prints out "[ 2, 3, 4, 5, 6 ]"
+
+// In constrast, without the map method, we use a for loop:
+for(let i = 0; i<arr.length; i++){
+    arr[i] += 1; // this DOES modify the original array
+}
+console.log(arr); // prints "[ 2, 3, 4, 5, 6 ]"
+
+// filter
+let arr2 = [1,2,3,4,5];
+console.log("Before filter: " + arr2);
+function isOdd(num){
+    if(num%2==0){
+        return num;
+    }
+}
+console.log("Directly printing filter: "+arr2.filter(isOdd));
