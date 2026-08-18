@@ -348,12 +348,12 @@ for(let i = 0; i<10; i++){
     console.log(i+" "); // prints 0 to 9 each on a new line 
 }
 for(let i = 0; i<10; i++){
-    process.stdout.write(i+" "); // prints 0 to 9 on a single line
+    //process.stdout.write(i+" "); // prints 0 to 9 on a single line, but undefined in the web ---
 }
 let i = 0
 console.log() // new line
 while(i<10){
-    process.stdout.write(i+" "); // prints 0 to 9 on a single line
+    //process.stdout.write(i+" "); // prints 0 to 9 on a single line, but undefined in the web --- 
     i++;
 }
 console.log() // new line
@@ -391,3 +391,15 @@ function isOdd(num){
     }
 }
 console.log("Directly printing filter: "+arr2.filter(isOdd));
+
+
+// DOM Manipulation and Events
+// Targeting nodes with selectors
+let containerVar = document.querySelector("#container"); // selects the #container div (don't worry about the syntax, we'll get there)
+let display1 = containerVar.firstElementChild; // selects the first child of #container => .display
+console.log(display1); // prints "<div class="display"></div>"
+
+let controlsVar = document.querySelector(".controls"); // selects the .controls div
+let display2 = controlsVar.previousElementSibling; // selects the prior sibling => .display
+console.log(display2) // <div class="display"></div>
+

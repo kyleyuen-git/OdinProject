@@ -1,1 +1,1 @@
-Error("Cannot divide by zero!");
+console.log(display);
